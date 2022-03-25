@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "113282073777",
+    "project_id": "personality-analyzer",
+    "storage_bucket": "personality-analyzer.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:113282073777:android:a85c62c037384a97c70e90",
+        "android_client_info": {
+          "package_name": "com.example.flutter_application_1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "113282073777-1s6d069rmrpg4gll4dm7caf8rlegrs5s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8k96hYp9SiRCUcBZrG1QZVAhY8Evgqu4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "113282073777-1s6d069rmrpg4gll4dm7caf8rlegrs5s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
