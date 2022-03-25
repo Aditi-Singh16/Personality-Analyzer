@@ -26,7 +26,7 @@ class _SignInState extends State<SignIn> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.pink[400],
+        backgroundColor:  Colors.blue,
         elevation: 0.0,
         title: Text('Sign in'),
         actions: <Widget>[
