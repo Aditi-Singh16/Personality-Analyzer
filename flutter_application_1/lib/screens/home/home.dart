@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:conditional_questions/conditional_questions.dart';
-//import 'package:sklite/utils/io.dart';
 import 'dart:convert';
 import 'package:flutter_application_1/services/auth.dart';
 import 'questions.dart';
 
 var lst=[];
-
 
 class Home extends StatelessWidget {
   @override
@@ -14,9 +12,15 @@ class Home extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        shadowColor:Color.fromARGB(255, 216, 235, 49) ,
+        hoverColor:Color.fromARGB(255, 233, 185, 27),
+        fontFamily: 'EBGaramond',
+        scaffoldBackgroundColor:const Color(0xffdfe7fd),
+          appBarTheme:const AppBarTheme(
+            backgroundColor: Color(0xff5fa8d3),
+          ),
       ),
-      home: MyHomePage(title: 'Questionnarie'),
+      home: MyHomePage(title: 'Take the test'),
     );
   }
 }
@@ -41,10 +45,10 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title!),actions: <Widget>[
+        title: Text(widget.title!,style:const TextStyle(fontFamily: 'EBGaramond',fontSize: 30)),actions: <Widget>[
             FlatButton.icon(
-              icon: Icon(Icons.person),
-              label: Text('logout'),
+              icon: const Icon(Icons.person,color: Color.fromARGB(255, 255, 255, 255) ,),
+              label: const Text('logout',style:TextStyle(fontFamily: 'EBGaramond',fontSize: 25,color:Color.fromARGB(255, 255, 255, 255))),
               onPressed: () async {
                 await _auth.signOut();
               },
@@ -56,24 +60,25 @@ class _MyHomePageState extends State<MyHomePage> {
         key: _key,
         children: questions(),
         trailing: [
-          MaterialButton(
-            color: Colors.blueAccent,
+          RaisedButton(
+            color: const Color(0xff5fa8d3),
             splashColor: Colors.orangeAccent,
-            onPressed: (){
-              //print("hello");
-              lst.add(_key.currentState?.widget);
+            onPressed: ()async {
+              var result=[];
+              if (_key.currentState!.validate()) {
+                print("validated!");
+              }
+              _key.currentState?.getElementList().forEach((element) {result.add(element.answer);});
+              setState(() {
+                lst=result;
+              });
               print(lst);
-               // learnDemo();
             },
-            child: Text("Submit"),
-          )
+            child: const Text("Submit",style:TextStyle(fontFamily: 'EBGaramond',fontSize: 25,color:Color.fromARGB(255, 255, 255, 255) )),
+          ),
+          const SizedBox(height:20),
         ],
       ),
     );
   }
-  // learnDemo() async{
-  //   List<List<int>> X = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]];
-  //   print("Naive Bayes");
-  //   //print(svc.predict(X));
-  // }
 }

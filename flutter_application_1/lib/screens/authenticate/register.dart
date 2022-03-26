@@ -26,19 +26,19 @@ class _RegisterState extends State<Register> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blue,
+        backgroundColor: Color(0xff5fa8d3),
         elevation: 0.0,
-        title: Text('Sign up'),
+        title: const Text('Sign up',style:TextStyle(fontFamily: 'EBGaramond',fontSize: 25,color:Color.fromARGB(255, 255, 255, 255))),
         actions: <Widget>[
           FlatButton.icon(
-            icon: Icon(Icons.person),
-            label: Text('Sign In'),
+            icon: const Icon(Icons.person,color: Color.fromARGB(255, 255, 255, 255) ,),
+            label: const Text('Sign In',style:TextStyle(fontFamily: 'EBGaramond',fontSize: 25,color:Color.fromARGB(255, 255, 255, 255))),
             onPressed: () => widget.toggleView(),
           ),
         ],
       ),
       body: Container(
-        padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 50.0),
+        padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 50.0),
         child: Form(
           key: _formKey,
           child: Column(
@@ -52,17 +52,17 @@ class _RegisterState extends State<Register> {
               //   onPressed: (){
 
               //   }),
-              SizedBox(height: 20.0),
+              const SizedBox(height: 20.0),
                Padding(
-            padding: EdgeInsets.all(20),
+            padding: const EdgeInsets.all(20),
             child: TextFormField(
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 border: OutlineInputBorder(),
                 focusedBorder: OutlineInputBorder(
                   borderSide: BorderSide(color: Colors.black),
                 ),
                 labelText: 'Email*',
-                labelStyle: TextStyle(color: Colors.black, fontSize: 20),
+                labelStyle: TextStyle(color: Colors.black, fontSize: 20,fontFamily: 'EBGaramond'),
               ),
               validator:(val) => val!.isEmpty ? 'Enter an email' : null,
                 onChanged: (val) {
@@ -70,18 +70,18 @@ class _RegisterState extends State<Register> {
                 },
             ),
           ),
-              SizedBox(height: 20.0),
+              const SizedBox(height: 20.0),
                 Padding(
-            padding: EdgeInsets.all(20),
+            padding: const EdgeInsets.all(20),
             child: TextFormField(
               obscureText: true,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 border: OutlineInputBorder(),
                 focusedBorder: OutlineInputBorder(
                   borderSide: BorderSide(color: Colors.black),
                 ),
                 labelText: 'Password*',
-                labelStyle: TextStyle(color: Colors.black, fontSize: 20),
+                labelStyle: TextStyle(color: Colors.black, fontSize: 20,fontFamily: 'EBGaramond'),
               ),
               validator:(val) => val!.length < 6 ? 'Enter a password 6+ chars long' : null,
                 onChanged: (val) {
@@ -89,13 +89,14 @@ class _RegisterState extends State<Register> {
                 },
             ),
           ),
-              SizedBox(height: 20.0),
+              const SizedBox(height: 20.0),
               RaisedButton(
-                color: Colors.pink[400],
-                child: Text(
+                color: Color(0xff5fa8d3) ,
+                child: const Text(
                   'Register',
-                  style: TextStyle(color: Colors.white),
+                  style: TextStyle(fontFamily: 'EBGaramond',fontSize: 28,color:Color.fromARGB(255, 255, 255, 255)),
                 ),
+                padding: EdgeInsets.all(15),
                 onPressed: () async {
                   if(_formKey.currentState!.validate()){
                     dynamic result = await _auth.registerWithEmailAndPassword(email, password);
@@ -107,10 +108,10 @@ class _RegisterState extends State<Register> {
                   }
                 }
               ),
-              SizedBox(height: 12.0),
+              const SizedBox(height: 12.0),
               Text(
                 error,
-                style: TextStyle(color: Colors.red, fontSize: 14.0),
+                style: const TextStyle( fontFamily: 'EBGaramond',fontSize: 25,color:Color.fromARGB(255, 255, 255, 255)),
               )
             ],
           ),
