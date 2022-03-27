@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:conditional_questions/conditional_questions.dart';
-import 'dart:convert';
+import 'package:flutter_application_1/backend/apicall.dart';
+import 'package:flutter_application_1/screens/home/test_result.dart';
 import 'package:flutter_application_1/services/auth.dart';
 import 'questions.dart';
 
@@ -67,12 +68,13 @@ class _MyHomePageState extends State<MyHomePage> {
               var result=[];
               if (_key.currentState!.validate()) {
                 print("validated!");
+                _key.currentState?.getElementList().forEach((element) {result.add(element.answer);});
+                //String personalityType = await GetPersonalityOfPeople().fetchPersonality(result.join("."));
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) =>TestResult(mbtiType: "INFJ",)),
+                );
               }
-              _key.currentState?.getElementList().forEach((element) {result.add(element.answer);});
-              setState(() {
-                lst=result;
-              });
-              print(lst);
             },
             child: const Text("Submit",style:TextStyle(fontFamily: 'EBGaramond',fontSize: 25,color:Color.fromARGB(255, 255, 255, 255) )),
           ),
