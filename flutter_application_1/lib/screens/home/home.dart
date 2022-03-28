@@ -65,14 +65,13 @@ class _MyHomePageState extends State<MyHomePage> {
             color: const Color(0xff5fa8d3),
             splashColor: Colors.orangeAccent,
             onPressed: ()async {
-              var result=[];
+              List<String> result=[];
               if (_key.currentState!.validate()) {
                 print("validated!");
                 _key.currentState?.getElementList().forEach((element) {result.add(element.answer);});
-                String personalityType = await GetPersonalityOfPeople().fetchPersonality(result.join("."));
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) =>TestResult(mbtiType: personalityType,)),
+                  MaterialPageRoute(builder: (context) =>TestResult(resultAns: result,)),
                 );
               }
             },
