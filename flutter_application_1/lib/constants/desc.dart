@@ -2,40 +2,40 @@
 class DescConstant{
   final Map<String, dynamic> mbtiRes = {
     'ENFJ':{
-       "desc":"",
-       "strength":"",
-       "weakness":"",
-       "career":""
+       "desc":"ENFJs are typically warm, collaborative and supportive, as well as friendly and organised. They also tend to be persuasive.",
+       "strength":"ENFJs are able to get the most out of teams by working closely with them, and make decisions that respect and take into account the values of others. They tend to be adept at building consensus and inspiring others as leaders. ",
+       "weakness":"ENFJ people often talk a lot, and may become discouraged if they do not receive a lot of feedback from others. They expect everyone to give as much to the task as they do, and can find conflict and lack of consensus difficult to deal with. They may overlook logical, factual realities when making decisions.",
+       "career":"ENFJs are likely to be attracted to careers in counselling, teaching, healthcare or religion. "
     },
     'ENFP':{
-       "desc":"",
-       "strength":"",
-       "weakness":"",
-       "career":""
+       "desc":"ENFPs are typically friendly and expressive as well as innovative and energetic.",
+       "strength":"ENFPs are willing to consider almost any possibility and often develop multiple solutions to a problem. Their energy is stimulated by new people and experiences. ",
+       "weakness":"ENFP people may not follow through on decisions or projects, and risk burning out from over-committing or following every possibility. They may also have trouble determining priorities.",
+       "career":"ENFPs tend to be attracted to jobs in coaching and development, teaching and religious callings, as well as the creative arts."
     },
     'ENTJ':{
-       "desc":"",
-       "strength":"",
-       "weakness":"",
-       "career":""
+       "desc":"ENTJs are typically structured and challenging, they also tend to be strategic and questioning.",
+       "strength":"ENTJs see the big picture and think strategically about the future. They are able to efficiently organise people and resources in order to accomplish long-term goals, and tend to be comfortable with taking strong leadership over others.",
+       "weakness":"ENTJs may overlook the contributions of others and may neglect to consider the needs of the people who implement their plans. Because they drive themselves strongly, they risk driving others as hard and may intimidate people with their take-charge attitude.",
+       "career":"ENTJs work best in a fast-growing environment which fosters competition, rewards achievement and offers them continual new challenges.They are typically attracted to positions of leadership and management, where tough-minded analysis is key"
     },
     'ENTP':{
-       "desc":"",
-       "strength":"",
-       "weakness":"",
-       "career":""
+       "career":"ENTPs prefer to work in a fast-growing, high-energy atmosphere which is characterised by autonomy and the freedom to think differently. They enjoy devising technical solutions to problems and selling new ideas and opportunities to others. Careers within a wide variety of fields will appeal to ENTPs, include those in the creative professions, business management, finance and engineering.",
+       "strength":"ENTPs solve problems creatively and are often innovative in their way of thinking, seeing connections and patterns within a system. They enjoy developing strategy and often spot and capitalise on new opportunities that present themselves. ",
+       "weakness":"ENTPs sometimes avoid making decisions and may become excited about ideas that are not feasible because of constraints on time or resources. They may be overly challenging to others and their ideas.",
+       "desc":"ENTPs are typically emergent, theoretical and flexible as well as imaginative and challenging."
     },
     'ESFJ':{
-       "desc":"",
-       "strength":"",
-       "weakness":"",
-       "career":""
+       "desc":"ESFJs are typically warm and appreciative as well as organised, outgoing and supportive. They are also realistic and loyal.",
+       "strength":"ESFJs tend to be sociable and outgoing, understanding what others need and expressing appreciation for their contributions. They collect the necessary facts to help them make a decision and enjoy setting up effective procedures. ",
+       "weakness":"ESFJs may be overly influenced by what they think others want when making decisions, and may find it difficult to adjust plans in response to unexpected opportunities. They risk being too accepting or deferential to those in charge.",
+       "career":"ESFJs are likely to be attracted to jobs in childcare, nursing, teaching or religious institutions."
     },
     'ESFP':{
-       "desc":"",
-       "strength":"",
-       "weakness":"",
-       "career":""
+       "desc":"ESFPs are typically tolerant and spontaneous as well as playful and resourceful. They also tend to be friendly and enthusiastic.",
+       "strength":"ESFP people tend to be adaptable, friendly, and talkative. They enjoy life and being around people. This personality type enjoys working with others and experiencing new situations.",
+       "weakness":"ESFP personality types sometimes have trouble meeting deadlines, and do not always finish what they start. They can get easily distracted.",
+       "career":"ESFPs are often attracted to careers where their outgoing nature and attention to others can be applied, including fields such as healthcare and teaching. "
     },
     'ESTJ':{
        "desc":"ESTJs are typically responsible and efficient but they can also be assertive as well as logical and realistic.",

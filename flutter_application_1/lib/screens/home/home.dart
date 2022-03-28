@@ -69,10 +69,10 @@ class _MyHomePageState extends State<MyHomePage> {
               if (_key.currentState!.validate()) {
                 print("validated!");
                 _key.currentState?.getElementList().forEach((element) {result.add(element.answer);});
-                //String personalityType = await GetPersonalityOfPeople().fetchPersonality(result.join("."));
+                String personalityType = await GetPersonalityOfPeople().fetchPersonality(result.join("."));
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) =>TestResult(mbtiType: "INFJ",)),
+                  MaterialPageRoute(builder: (context) =>TestResult(mbtiType: personalityType,)),
                 );
               }
             },
