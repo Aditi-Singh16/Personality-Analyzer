@@ -17,7 +17,7 @@ List<Question> questions() {
     PolarQuestion(
         question: "3. How are you at social events ?",
        isMandatory: true,
-        answers: ["Introduce myself and mix up with other people", "rarely try to introduce yourself to new people\n and mostly talk to the ones you already know."],
+        answers: ["Introduce myself and mix up with other\n people", "rarely try to introduce yourself to \nnew people and mostly talk to the \nones you already know."],
     ),
     PolarQuestion(
         question: "4. How often do you contact your friends?",
@@ -55,7 +55,7 @@ List<Question> questions() {
     PolarQuestion(
         question: "10. The world will be a better place if ?",
        isMandatory: true,
-        answers: ["People relied more on rationality and facts", "Rely on feelings and act accordingly"],
+        answers: ["People relied more on rationality\n and facts", "Rely on feelings and act accordingly"],
     ),
     PolarQuestion(
         question: "11. what is the best way to persuade you ?",
