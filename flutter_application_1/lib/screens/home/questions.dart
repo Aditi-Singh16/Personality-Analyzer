@@ -12,7 +12,7 @@ List<Question> questions() {
     PolarQuestion(
         question: "2. How often do you make new friends ?",
         isMandatory: true,
-        answers: ["Regularly,Love meeting new people", "I enjoy my own company,\nI am more of a reserved type.."],
+        answers: ["I Love making new friends", "self-reflection and like to stayI enjoy my own company,\nI am more of a reserved type.."],
         ),
     PolarQuestion(
         question: "3. How are you at social events ?",

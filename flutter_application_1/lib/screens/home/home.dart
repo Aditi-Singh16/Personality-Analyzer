@@ -5,7 +5,7 @@ import 'package:flutter_application_1/screens/home/test_result.dart';
 import 'package:flutter_application_1/services/auth.dart';
 import 'questions.dart';
 
-var lst=[];
+var lst = [];
 
 class Home extends StatelessWidget {
   @override
@@ -13,13 +13,13 @@ class Home extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        shadowColor:Color.fromARGB(255, 216, 235, 49) ,
-        hoverColor:Color.fromARGB(255, 233, 185, 27),
+        shadowColor: Color.fromARGB(255, 216, 235, 49),
+        hoverColor: Color.fromARGB(255, 233, 185, 27),
         fontFamily: 'EBGaramond',
-        scaffoldBackgroundColor:const Color(0xffdfe7fd),
-          appBarTheme:const AppBarTheme(
-            backgroundColor: Color(0xff5fa8d3),
-          ),
+        scaffoldBackgroundColor: const Color(0xffdfe7fd),
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Color(0xff5fa8d3),
+        ),
       ),
       home: MyHomePage(title: 'Take the test'),
     );
@@ -46,16 +46,24 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title!,style:const TextStyle(fontFamily: 'EBGaramond',fontSize: 30)),actions: <Widget>[
-            FlatButton.icon(
-              icon: const Icon(Icons.person,color: Color.fromARGB(255, 255, 255, 255) ,),
-              label: const Text('logout',style:TextStyle(fontFamily: 'EBGaramond',fontSize: 25,color:Color.fromARGB(255, 255, 255, 255))),
-              onPressed: () async {
-                await _auth.signOut();
-              },
+        title: Text(widget.title!,
+            style: const TextStyle(fontFamily: 'EBGaramond', fontSize: 30)),
+        actions: <Widget>[
+          FlatButton.icon(
+            icon: const Icon(
+              Icons.person,
+              color: Color.fromARGB(255, 255, 255, 255),
             ),
-          ],
-
+            label: const Text('logout',
+                style: TextStyle(
+                    fontFamily: 'EBGaramond',
+                    fontSize: 25,
+                    color: Color.fromARGB(255, 255, 255, 255))),
+            onPressed: () async {
+              await _auth.signOut();
+            },
+          ),
+        ],
       ),
       body: ConditionalQuestions(
         key: _key,
@@ -64,20 +72,29 @@ class _MyHomePageState extends State<MyHomePage> {
           RaisedButton(
             color: const Color(0xff5fa8d3),
             splashColor: Colors.orangeAccent,
-            onPressed: ()async {
-              List<String> result=[];
+            onPressed: () async {
+              String result = '';
               if (_key.currentState!.validate()) {
                 print("validated!");
-                _key.currentState?.getElementList().forEach((element) {result.add(element.answer);});
+                _key.currentState?.getElementList().forEach((element) {
+                  result = result + element.answer;
+                });
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) =>TestResult(resultAns: result,)),
+                  MaterialPageRoute(
+                      builder: (context) => TestResult(
+                            resultAns: result,
+                          )),
                 );
               }
             },
-            child: const Text("Submit",style:TextStyle(fontFamily: 'EBGaramond',fontSize: 25,color:Color.fromARGB(255, 255, 255, 255) )),
+            child: const Text("Submit",
+                style: TextStyle(
+                    fontFamily: 'EBGaramond',
+                    fontSize: 25,
+                    color: Color.fromARGB(255, 255, 255, 255))),
           ),
-          const SizedBox(height:20),
+          const SizedBox(height: 20),
         ],
       ),
     );

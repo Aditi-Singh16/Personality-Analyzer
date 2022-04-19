@@ -6,7 +6,7 @@ import 'package:flutter_application_1/screens/home/loading.dart';
 class TestResult extends StatefulWidget {
   const TestResult({required this.resultAns, Key? key}) : super(key: key);
 
-  final List<String> resultAns;
+  final String resultAns;
 
   @override
   State<TestResult> createState() => _TestResultState();
@@ -32,7 +32,7 @@ class _TestResultState extends State<TestResult> {
         ),
         body: FutureBuilder(
           future: GetPersonalityOfPeople()
-              .fetchPersonality(widget.resultAns.join(".")),
+              .fetchPersonality(widget.resultAns),
           builder: (context, AsyncSnapshot snapshot) {
             if (!snapshot.hasData) {
               return LoadingWheel();
