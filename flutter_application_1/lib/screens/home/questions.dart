@@ -108,5 +108,56 @@ List<Question> questions() {
         isMandatory: true,
         answers: [" No, I hate putting away things \nfor the last minute", "Always,I work better under pressure"],
     ),
+    PolarQuestion(
+        question: "21. Do you regularly make new friends? ",
+      //  isMandatory: true,
+        answers: ["I dont make new friends regularly", "I make new friends regularly"],
+    ),
+    
+    PolarQuestion(
+        question: "22. Do you feel like crying when you see other people cry ?",
+        isMandatory: true,
+        answers: ["I am not afftected when I see others cry", "I cry too, when I see others cry"],
+    ),
+    PolarQuestion(
+        question: "23. Do you make a backup plan for the backup plan?",
+       isMandatory: true,
+        answers: ["I never have a backup plan for a backup plan", "I always have a backup plan for a backup plan"],
+    ),
+    PolarQuestion(
+        question: "24. Do you participate in group activities?",
+        isMandatory: true,
+        answers: [" I dont like group activities", "Yes, I like group activities"],
+    ),
+    PolarQuestion(
+        question: "25. Do you often feel overwhelmed?",
+        isMandatory: true,
+        answers: [" No I am a calm person", "Yes, I often feel overhwelmed"],
+    ),
+    PolarQuestion(
+        question: "26. Are you intriguied with things labelled as controversial?",
+        isMandatory: true,
+        answers: [" Yes, I like being a part of a controversial topic", "No, I stay away from controversial topic"],
+    ),
+    PolarQuestion(
+        question: "27. Would you pass a good opportunity if you thought someone else needed it?",
+        isMandatory: true,
+        answers: ["No, I help myself first", "Yes, I am a selfless person"],
+    ),
+     PolarQuestion(
+        question: "28.Do you believe in following the rules?"
+        isMandatory: true,
+        answers: ["Yes, I do stuff methodically", "No, I go according to the flow"],
+    ),
+     PolarQuestion(
+        question: "29. Do you worry about your impression on people?",
+        isMandatory: true,
+        answers: ["I dont care what the world thinks of me", "I care what the world thinks of me"],
+    ),
+     PolarQuestion(
+        question: "30. Do you spend your free time in exploring random topics?",
+        isMandatory: true,
+        answers: [" No, I hate wasting my time in unfruitfull things", "Always,I love finding topics that pique my interest"],
+    ),
   ];
 }
